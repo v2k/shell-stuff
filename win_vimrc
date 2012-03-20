@@ -11,3 +11,4 @@ source $VIMRUNTIME\mswin.vim
 behave mswin
 nmap <F11> :silent !start explorer /select,%:p<CR>
 
+

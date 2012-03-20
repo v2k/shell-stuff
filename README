@@ -1,4 +1,4 @@
 #linux
 run setup.sh
 #windows
-copy win_vimrc to vim's install dir; repo should be at C:\Users\v2k\shell-stuff
+copy win_vimrc to vim's install dir; repo should be at C:\Users\<username>\shell-stuff

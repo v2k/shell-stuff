@@ -47,7 +47,9 @@ fi
 echo -n "  - Creating $HOME/.vim ... "
 if [ ! -e "$HOME/.vim" ]
 then
-    ln -s "$PWD/vim/vim-dir" "$HOME/.vim"
+    mkdir "$PWD/vimfiles/backup"
+    mkdir "$PWD/vimfiles/tmp"
+    ln -s "$PWD/vimfiles" "$HOME/.vim"
     echo "Done"
 else
     echo "Skip, already exists"
