@@ -12,5 +12,5 @@ fi
 PS1="[\u@\h \W]$ "
 # auto start screen
 if [ -z "$STY" ]; then
-    exec screen -dR
+    exec screen -dRR
 fi
