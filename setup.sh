@@ -47,7 +47,9 @@ fi
 echo -n "  - Creating $HOME/.vim ... "
 if [ ! -e "$HOME/.vim" ]
 then
-    ln -s "$PWD/vim/vim-dir" "$HOME/.vim"
+    mkdir "$PWD/vimfiles/backup"
+    mkdir "$PWD/vimfiles/tmp"
+    ln -s "$PWD/vimfiles" "$HOME/.vim"
     echo "Done"
 else
     echo "Skip, already exists"
@@ -56,7 +58,16 @@ fi
 echo -n "  - Creating $HOME/.vimrc ... "
 if [ ! -e "$HOME/.vimrc" ]
 then
-    ln -s "$PWD/vim/vimrc" "$HOME/.vimrc"
+    ln -s "$PWD/nix_vimrc" "$HOME/.vimrc"
+    echo "Done"
+else
+    echo "Skip, already exists"
+fi
+
+echo -n "  - Creating $HOME/.gitconfig ... "
+if [ ! -e "$HOME/.gitconfig" ]
+then
+    ln -s "$PWD/gitconfig" "$HOME/.gitconfig"
     echo "Done"
 else
     echo "Skip, already exists"
