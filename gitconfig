@@ -26,6 +26,7 @@
 # http://help.github.com/line-endings/
 # - supposed to set this to true apparently...
 #    autocrlf = true
+    autocrlf = input
 
 [alias]
     st = status
