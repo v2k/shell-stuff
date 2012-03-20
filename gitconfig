@@ -2,7 +2,7 @@
     name = v2k
     email = vince@weaktight.com
 [color]
-    ui = auto
+    ui = true
 [color "branch"]
     current = yellow reverse
     local = yellow
@@ -16,8 +16,6 @@
     added = yellow
     changed = green
     untracked = cyan
-[color]
-    ui = true
 [color "diff"]
     whitespace = red reverse
 [core]
