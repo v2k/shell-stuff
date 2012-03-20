@@ -11,6 +11,10 @@ source $VIMRUNTIME\mswin.vim
 behave mswin
 nmap <F11> :silent !start explorer /select,%:p<CR>
 
+" windows needs its own backup dir
+set backupdir=~\shell-stuff\vimfiles\backup
+set directory=~\shell-stuff\vimfiles\tmp
+
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
