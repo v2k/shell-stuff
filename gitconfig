@@ -1,7 +1,6 @@
 [user]
     name = v2k
     email = vince@weaktight.com
-    
 [color]
     ui = auto
 [color "branch"]
@@ -17,7 +16,6 @@
     added = yellow
     changed = green
     untracked = cyan
-
 [color]
     ui = true
 [color "diff"]
@@ -25,7 +23,9 @@
 [core]
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
     editor = vim
-
+# http://help.github.com/line-endings/
+# - supposed to set this to true apparently...
+#    autocrlf = true
 
 [alias]
     st = status
