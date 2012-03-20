@@ -1,0 +1,9 @@
+fun! MySys()
+  return "linux"
+endfun
+
+"todo: this path might be the install path
+set runtimepath=~/shell-stuff/vimfiles,$VIMRUNTIME
+source ~/shell-stuff/vimfiles/myvimrc
+set ff=unix
+

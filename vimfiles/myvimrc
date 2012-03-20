@@ -1,0 +1,99 @@
+" 
+" Tips/Tricks from SO: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc
+" 
+
+filetype on
+filetype plugin on
+syntax enable
+
+" Cool tab completion stuff
+" tips: http://www.dickscheid.net/2011/04/17-vimsWildmenu/
+set wildmenu
+set wildmode=list:longest,full
+
+" Turn on spell checking, but off by default
+if version >= 700
+   set spl=en spell
+   set nospell
+endif
+
+" Who doesn't like autoindent?
+set autoindent
+
+" Spaces are better than a tab character
+set expandtab
+set smarttab
+
+" Who wants an 8 character tab?  Not me!
+set shiftwidth=4
+set softtabstop=4
+
+
+" Cool tab completion stuff
+set wildmenu
+set wildmode=list:longest,full
+
+" Line Numbers PWN!
+set number
+
+" Ignore cases in searches
+set ignorecase
+
+" if search pattern contains an upper case char, it will do a case-sensitive
+" search
+set smartcase
+
+"Status line gnarliness
+set laststatus=2
+"set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
+set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l/%L:%c
+
+"Working/Backup Directories
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+
+" Automatically change working dir. to the one the file is in
+"set autochdir
+
+" from v2k's vimrc file
+colo tango
+set vi^=!
+"set tags=C:\Hardware\tech\poc1\ml\tags
+set tags=tags
+set nobackup
+set noswapfile
+set tabstop=4
+set shiftwidth=4
+set cindent
+set list
+set bs=2
+set hlsearch
+set guifont=courier_new:h9
+nmap <leader>fb :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', ['**/*.cs','**/*.php']]) <CR> :FufCoverageFile <CR>
+"save readonly file
+nmap <leader>ss :w !sudo tee %<CR>
+syntax on
+
+set nocompatible
+behave mswin
+
+"set tags=C:\Hardware\tech\poc1\game\tags
+" use fuzzy finder to find files under local dir
+"nmap <leader>ff :FufFile **/<CR>
+nmap <leader>ff :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', ['**/*.cs']]) <CR> :FufCoverageFile <CR>
+"set guifont=courier_new:h9
+" clean up whitE
+nmap <leader>ww :%s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/ge <bar> %s/while(/while (/ge <bar> %s/\r//ge <bar> retab <cr>
+nmap <leader>w :%s/\s\+$//ge<cr>
+"%s///ge <cr>
+
+"| %s/( /(//g | %s/ )/)//g | %s/if (/if (//g | %s/for(/for( //g<CR>
+nmap <leader>tt :retab<CR>
+nmap <leader>ee :%s/\r//g<CR>
+nmap <leader>gg :Grep 
+nmap <C-Tab> :bp<CR>
+nmap <C-S-Tab> :bn<CR>
+"need to fix this for windows
+nmap <leader>s :source $MYVIMRC<CR>
+nmap <leader>e :e $MYVIMRC<CR>

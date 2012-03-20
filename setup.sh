@@ -56,7 +56,16 @@ fi
 echo -n "  - Creating $HOME/.vimrc ... "
 if [ ! -e "$HOME/.vimrc" ]
 then
-    ln -s "$PWD/vim/vimrc" "$HOME/.vimrc"
+    ln -s "$PWD/nix_vimrc" "$HOME/.vimrc"
+    echo "Done"
+else
+    echo "Skip, already exists"
+fi
+
+echo -n "  - Creating $HOME/.gitconfig ... "
+if [ ! -e "$HOME/.gitconfig" ]
+then
+    ln -s "$PWD/gitconfig" "$HOME/.gitconfig"
     echo "Done"
 else
     echo "Skip, already exists"
