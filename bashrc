@@ -13,3 +13,6 @@ PS1="[\u@\h \W]$ "
 if [ -z "$STY" ]; then
     exec screen -dRR
 fi
+
+# bash aliases
+alias g='git'
