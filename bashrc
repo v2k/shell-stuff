@@ -4,8 +4,12 @@ if [[ $- != *i* ]] ; then
 fi
 
 #check for source bashrc
-if [ -f /etc/bashrc ]; then
-        . /etc/bashrc
+if [ -f /etc/bash/bashrc ]; then
+        . /etc/bash/bashrc
+fi
+
+if [ -f /etc/bash.bashrc ]; then
+        . /etc/bash.bashrc
 fi
 
 #PS1="[\u@\h \W]$ "
