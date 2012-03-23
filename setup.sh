@@ -23,6 +23,16 @@ else
     echo "Skip, already exists"
 fi
 
+# set dircolors
+echo -n "  - Setting $HOME/.dircolors: "
+if [ ! -e "$HOME/.dircolors" ]
+then
+    ln -s "$PWD/dircolors" "$HOME/.dircolors"
+    echo "Done"
+else
+    echo "Skip, already exists"
+fi
+
 # set bashrc file
 echo -n "  - Setting $HOME/.bashrc: "
 if [ ! -e "$HOME/.bashrc" ]
