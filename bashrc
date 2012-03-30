@@ -22,4 +22,4 @@ PS1='\[\033[01;32m\]\u\[\033[01:30m\]@\[\033[0;33m\]\h\[\033[01;34m\] \w $\[\033
 
 # bash aliases
 alias g='git'
-alias ls='ls -la --color=auto'
+alias ls='ls --color=auto'
