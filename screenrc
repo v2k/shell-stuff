@@ -1,3 +1,4 @@
+startup_message off
 term xterm-256color
 hardstatus on
 hardstatus alwayslastline
