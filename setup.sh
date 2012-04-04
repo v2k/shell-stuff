@@ -74,6 +74,7 @@ else
     echo "Skip, already exists"
 fi
 
+# git
 echo -n "  - Creating $HOME/.gitconfig ... "
 if [ ! -e "$HOME/.gitconfig" ]
 then
@@ -82,3 +83,13 @@ then
 else
     echo "Skip, already exists"
 fi
+
+echo -n "  - Creating $HOME/.git-completion ... "
+if [ ! -e "$HOME/.gitcompletion.sh" ]
+then
+    ln -s "$PWD/git-completion.sh" "$HOME/.git-completion.sh"
+    echo "Done"
+else
+    echo "Skip, already exists"
+fi
+
