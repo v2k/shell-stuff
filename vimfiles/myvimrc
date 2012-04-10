@@ -34,7 +34,7 @@ set wildmenu
 set wildmode=list:longest,full
 
 " Line Numbers PWN!
-set number
+"set number
 
 " Ignore cases in searches
 set ignorecase
