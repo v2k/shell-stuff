@@ -85,7 +85,7 @@ else
 fi
 
 echo -n "  - Creating $HOME/.git-completion ... "
-if [ ! -e "$HOME/.gitcompletion.sh" ]
+if [ ! -e "$HOME/.git-completion.sh" ]
 then
     ln -s "$PWD/git-completion.sh" "$HOME/.git-completion.sh"
     echo "Done"
