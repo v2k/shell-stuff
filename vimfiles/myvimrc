@@ -34,7 +34,7 @@ set wildmenu
 set wildmode=list:longest,full
 
 " Line Numbers PWN!
-set number
+"set number
 
 " Ignore cases in searches
 set ignorecase
@@ -80,11 +80,11 @@ behave mswin
 
 "set tags=C:\Hardware\tech\poc1\game\tags
 " use fuzzy finder to find files under local dir
-"nmap <leader>ff :FufFile **/<CR>
+nmap <leader>f :FufFile **/*<CR>
 nmap <leader>ff :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', ['**/*.cs','**/*.php']]) <CR> :FufCoverageFile <CR>
 "set guifont=courier_new:h9
 " clean up whitE
-nmap <leader>ww :%s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/ge <bar> %s/while(/while (/ge <bar> %s/\r//ge <bar> retab <cr>
+nmap <leader>ww %s&\/\/([^\ ^\/])&// \1&ge <bar> %s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/ge <bar> %s/while(/while (/ge <bar> %s/\r//ge <bar> retab <cr>
 nmap <leader>w :%s/\s\+$//ge<cr>
 "%s///ge <cr>
 
