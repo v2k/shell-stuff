@@ -10,4 +10,4 @@ PATH=$PATH:$HOME/bin:/usr/sbin:/sbin
 export PATH
 
 startxwin >/dev/null 2>&1
-export DISPLAY=localhost:0.0
+export DISPLAY=localhost:10.0
