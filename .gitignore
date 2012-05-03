@@ -2,3 +2,4 @@ vimfiles/backup/*
 !vimfiles/backup/README
 vimfiles/tmp/*
 !vimfiles/tmp/README
+.netrwhist
