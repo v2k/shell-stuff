@@ -100,3 +100,5 @@ nmap <C-S-Tab> :bn<CR>
 "need to fix this for windows
 nmap <leader>s :source $MYVIMRC<CR>
 nmap <leader>e :e $MYVIMRC<CR>
+
+set paste
