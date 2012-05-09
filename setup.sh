@@ -93,3 +93,8 @@ else
     echo "Skip, already exists"
 fi
 
+echo "  - Creating template hook dir"
+mkdir -p "$HOME/.git_template/hooks"
+echo "  - Copying template hooks"
+cp -v $PWD/hooks/* "$HOME/.git_template/hooks"
+

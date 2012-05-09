@@ -40,6 +40,7 @@
 
     # Show files ignored by git:
     ign = ls-files -o -i --exclude-standard
+	ctags = !.git/hooks/ctags
 
 [push]
     default = tracking
@@ -88,3 +89,5 @@
 	confirm = yes
 [fetch]
 	recurseSubmodules = true
+[init]
+	templatedir = ~/.git_template
