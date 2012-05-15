@@ -1,4 +1,6 @@
 #!/bin/sh
 rm -f .git/tags
+echo "[ctags] Updating ctags..."
 ctags --tag-relative -Rf.git/tags --exclude=.git
 #ctags --tag-relative -Rf.git/tags --exclude=.git --verbose
+echo "[ctags] Done."
