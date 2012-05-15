@@ -63,7 +63,7 @@ set directory=~/.vim/tmp
 colo pablo " better in shell
 set vi^=!
 "set tags=C:\Hardware\tech\poc1\ml\tags
-set tags=tags
+"set tags=~/tags
 set nobackup
 set noswapfile
 set tabstop=4

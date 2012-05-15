@@ -1,4 +1,4 @@
 #!/bin/sh
 rm -f .git/tags
-#ctags --tag-relative -Rf.git/tags --exclude=.git
-ctags --tag-relative -Rf.git/tags --exclude=.git --verbose
+ctags --tag-relative -Rf.git/tags --exclude=.git
+#ctags --tag-relative -Rf.git/tags --exclude=.git --verbose
