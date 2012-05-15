@@ -32,9 +32,9 @@ hi IncSearch    cterm=none ctermfg=yellow ctermbg=green
 
 " Window Elements
 hi StatusLine   guifg=#eeeeec guibg=#4e9a06 gui=bold
-hi StatusLine   ctermfg=white ctermbg=green cterm=bold
+hi StatusLine   ctermfg=white ctermbg=darkblue cterm=bold
 hi StatusLineNC guifg=#d3d7df guibg=#4e9a06
-hi StatusLineNC ctermfg=lightgray ctermbg=darkgreen
+hi StatusLineNC ctermfg=grey ctermbg=black
 hi VertSplit    guifg=#eeeeec guibg=#eeeeec
 hi Folded       guifg=#eeeeec guibg=#75507b
 hi Folded       ctermfg=white ctermbg=magenta
@@ -43,27 +43,27 @@ hi Visual       ctermbg=white ctermfg=lightgreen cterm=reverse
 
 " Specials
 hi Todo         guifg=#8ae234 guibg=#4e9a06 gui=bold
-hi Todo         ctermfg=white ctermbg=green
+hi Todo         ctermfg=cyan ctermbg=darkblue
 hi Title        guifg=#eeeeec gui=bold
 hi Title        ctermfg=white cterm=bold
 
 " Syntax
 hi Constant     guifg=#c4a000
-hi Constant     ctermfg=darkyellow
+hi Constant     ctermfg=darkcyan
 hi Number       guifg=#c5a0cf
 "hi Number       guifg=#729fcf
-hi Number       ctermfg=yellow
+hi Number       ctermfg=darkcyan
 "darkblue
 hi Statement    guifg=#4e9a06 gui=bold
-hi Statement    ctermfg=green
+hi Statement    ctermfg=yellow
 hi Identifier   guifg=#8ae234
 hi Identifier   ctermfg=darkgreen
 hi PreProc      guifg=#cc0000
 hi PreProc      ctermfg=darkred
 hi Comment      guifg=#06989a gui=italic
-hi Comment      ctermfg=cyan cterm=none
+hi Comment      ctermfg=darkgreen cterm=none
 hi Type         guifg=#d3d7cf gui=bold
-hi Type         ctermfg=gray cterm=bold
+hi Type         ctermfg=green cterm=bold
 hi Special      guifg=#75507b
 hi Special      ctermfg=magenta cterm=none
 hi Error        guifg=#eeeeec guibg=#ef2929
@@ -78,3 +78,8 @@ hi DiffDelete   guibg=bg
 hi DiffDelete   ctermfg=gray ctermbg=none cterm=none
 hi DiffText     guifg=fg guibg=#c4a000 gui=none
 hi DiffText     ctermfg=gray ctermbg=yellow cterm=none
+
+"fuf settings
+highlight PmenuSel ctermbg=blue ctermfg=cyan guibg=blue guifg=cyan
+highlight Pmenu ctermbg=darkblue guibg=darkblue ctermfg=grey guifg=grey
+highlight Error ctermbg=darkblue guibg=darkblue ctermfg=yellow guifg=yellow
