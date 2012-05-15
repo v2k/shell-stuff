@@ -59,8 +59,8 @@ set directory=~/.vim/tmp
 "set autochdir
 
 " from v2k's vimrc file
-"colo tango
-colo pablo " better in shell
+colo tango
+"colo pablo " better in shell
 set vi^=!
 "set tags=C:\Hardware\tech\poc1\ml\tags
 "set tags=~/tags
