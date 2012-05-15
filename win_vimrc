@@ -31,4 +31,3 @@ else
     set columns=100
   endif
 endif
-
