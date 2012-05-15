@@ -57,12 +57,14 @@ hi Number       ctermfg=darkcyan
 hi Statement    guifg=#4e9a06 gui=bold
 hi Statement    ctermfg=yellow
 hi Identifier   guifg=#8ae234
+hi Identifier   guifg=yellow
 hi Identifier   ctermfg=darkgreen
 hi PreProc      guifg=#cc0000
 hi PreProc      ctermfg=darkred
 hi Comment      guifg=#06989a gui=italic
 hi Comment      ctermfg=darkgreen cterm=none
-hi Type         guifg=#d3d7cf gui=bold
+hi Type         guifg=#5ed350 gui=bold
+"hi Type         guifg=green gui=bold
 hi Type         ctermfg=green cterm=bold
 hi Special      guifg=#75507b
 hi Special      ctermfg=magenta cterm=none
