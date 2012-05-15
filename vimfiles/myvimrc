@@ -83,7 +83,16 @@ behave mswin
 
 "set tags=C:\Hardware\tech\poc1\game\tags
 " use fuzzy finder to find files under local dir
+highlight PmenuSel ctermbg=blue ctermfg=cyan guibg=blue guifg=cyan
+highlight Pmenu ctermbg=darkblue guibg=darkblue ctermfg=grey guifg=grey
+highlight Error ctermbg=darkblue guibg=darkblue ctermfg=yellow guifg=yellow
+
 nmap <leader>f :FufFile **/*<CR>
+nmap <leader>b :FufBuffer **/*<CR>
+nmap <leader>t :FufTag **/*<CR>
+nmap <leader>l :FufLine **/*<CR>
+noremap <silent> <C-]> :FufTagWithCursorWord!<CR>
+
 nmap <leader>ff :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', ['**/*.cs','**/*.php']]) <CR> :FufCoverageFile <CR>
 "set guifont=courier_new:h9
 " clean up whitE
@@ -101,4 +110,4 @@ nmap <C-S-Tab> :bn<CR>
 nmap <leader>s :source $MYVIMRC<CR>
 nmap <leader>e :e $MYVIMRC<CR>
 
-set paste
+"set paste " this breaks fuzzyfinder
