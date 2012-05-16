@@ -25,9 +25,9 @@ hi Cursor       guibg=#d3d7cf
 hi lCursor      guibg=#d3d7cf
 
 " Search
-hi Search       guifg=#eeeeec guibg=#c4a000
+hi Search       guifg=#eeeeec guibg=darkgreen
 hi Search       cterm=none ctermfg=grey ctermbg=blue
-hi IncSearch    guibg=#eeeeec guifg=#729fcf
+hi IncSearch    guibg=#eeeeec guifg=darkgreen
 hi IncSearch    cterm=none ctermfg=yellow ctermbg=green
 
 " Window Elements
