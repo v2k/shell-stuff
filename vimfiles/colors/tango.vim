@@ -25,8 +25,10 @@ hi Cursor       guibg=#d3d7cf
 hi lCursor      guibg=#d3d7cf
 
 " Search
+hi Search       guifg=#eeeeec guibg=#c4a000
 hi Search       guifg=#eeeeec guibg=darkgreen
 hi Search       cterm=none ctermfg=grey ctermbg=blue
+hi IncSearch    guibg=#eeeeec guifg=#729fcf
 hi IncSearch    guibg=#eeeeec guifg=darkgreen
 hi IncSearch    cterm=none ctermfg=yellow ctermbg=green
 
@@ -39,7 +41,7 @@ hi VertSplit    guifg=#eeeeec guibg=#eeeeec
 hi Folded       guifg=#eeeeec guibg=#75507b
 hi Folded       ctermfg=white ctermbg=magenta
 hi Visual       guifg=#d3d7cf guibg=#4e9a06
-hi Visual       ctermbg=white ctermfg=lightgreen cterm=reverse
+hi Visual       ctermbg=black ctermfg=darkgreen cterm=reverse
 
 " Specials
 hi Todo         guifg=#8ae234 guibg=#4e9a06 gui=bold
