@@ -41,6 +41,7 @@
     # Show files ignored by git:
     ign = ls-files -o -i --exclude-standard
 	ctags = !.git/hooks/ctags
+	sub = submodule foreach git
 
 [push]
     default = tracking
