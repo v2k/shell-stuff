@@ -91,7 +91,7 @@ nmap <leader>f :FufFile **/*<CR>
 nmap <leader>b :FufBuffer<CR>
 nmap <leader>t :FufTag<CR>
 nmap <leader>l :FufLine<CR>
-noremap <silent> <C-]> :FufTagWithCursorWord!<CR>
+"noremap <silent> <C-]> :FufTagWithCursorWord!<CR>
 
 nmap <leader>ff :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', ['**/*.cs','**/*.php']]) <CR> :FufCoverageFile <CR>
 "set guifont=courier_new:h9
