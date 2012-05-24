@@ -27,7 +27,7 @@ hi lCursor      guibg=#d3d7cf
 " Search
 hi Search       guifg=#eeeeec guibg=#c4a000
 hi Search       guifg=#eeeeec guibg=darkgreen
-hi Search       cterm=none ctermfg=grey ctermbg=blue
+hi Search       cterm=none ctermfg=black ctermbg=darkgreen
 hi IncSearch    guibg=#eeeeec guifg=#729fcf
 hi IncSearch    guibg=#eeeeec guifg=darkgreen
 hi IncSearch    cterm=none ctermfg=yellow ctermbg=green
@@ -50,6 +50,8 @@ hi Title        guifg=#eeeeec gui=bold
 hi Title        ctermfg=white cterm=bold
 
 " Syntax
+hi MatchParen   guifg=#d3d7cf guibg=#4e9a06
+hi MatchParen   ctermbg=white ctermfg=darkblue cterm=reverse
 hi Constant     guifg=#c4a000
 hi Constant     ctermfg=darkcyan
 hi Number       guifg=#c5a0cf
