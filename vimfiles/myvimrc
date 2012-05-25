@@ -111,3 +111,5 @@ nmap <leader>s :source $MYVIMRC<CR>
 nmap <leader>e :e $MYVIMRC<CR>
 
 "set paste " this breaks fuzzyfinder
+
+set iskeyword+=\.
