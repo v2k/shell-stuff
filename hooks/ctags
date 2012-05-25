@@ -2,6 +2,6 @@
 # source: http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
 rm -f .git/tags
 echo "[ctags] Updating ctags..."
-ctags --tag-relative -Rf.git/tags --exclude=.git
+ctags --tag-relative -Rf.git/tags --exclude=.git &
 #ctags --tag-relative -Rf.git/tags --exclude=.git --verbose
 echo "[ctags] Done."
