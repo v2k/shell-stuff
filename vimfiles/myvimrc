@@ -112,4 +112,4 @@ nmap <leader>e :e $MYVIMRC<CR>
 
 "set paste " this breaks fuzzyfinder
 
-set iskeyword+=\.
+set iskeyword=@,48-57,_,192-255
