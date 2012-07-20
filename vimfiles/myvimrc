@@ -113,3 +113,10 @@ nmap <leader>e :e $MYVIMRC<CR>
 "set paste " this breaks fuzzyfinder
 
 set iskeyword=@,48-57,_,192-255
+" fugitive hotkeys
+nmap <leader>gb :Gblame<CR>
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gd :Gdiff<CR>
+
+" fix for word matching on: this.function
+"set iskeyword+=\.
