@@ -38,7 +38,7 @@
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ls = ls-files
     incoming = !git fetch && git log ..origin/master
-    pp = git pull && git push
+    pp = !git pull --rebase && git push
 
     # Show files ignored by git:
     ign = ls-files -o -i --exclude-standard
