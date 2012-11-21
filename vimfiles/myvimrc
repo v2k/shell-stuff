@@ -96,7 +96,7 @@ nmap <leader>l :FufLine<CR>
 nmap <leader>ff :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', ['**/*.cs','**/*.php']]) <CR> :FufCoverageFile <CR>
 "set guifont=courier_new:h9
 " clean up whitE
-nmap <leader>ww :%s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/ge <bar> %s/while(/while (/ge <bar> %s/\r//ge <bar> retab <cr>
+nmap <leader>ww :%s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/geI <bar> %s/while(/while (/ge <bar> %s/\r//ge <bar> retab <cr>
 nmap <leader>w :%s/\s\+$//ge<cr>
 "%s///ge <cr>
 
