@@ -103,7 +103,7 @@ nmap <leader>w :%s/\s\+$//ge<cr>
 "| %s/( /(//g | %s/ )/)//g | %s/if (/if (//g | %s/for(/for( //g<CR>
 nmap <leader>tt :retab<CR>
 nmap <leader>ee :%s/\r//g<CR>
-nmap <leader>gg :Grep 
+nmap <leader>gg :Ggrep 
 nmap <C-Tab> :bp<CR>
 nmap <C-S-Tab> :bn<CR>
 "need to fix this for windows
@@ -117,6 +117,7 @@ set iskeyword=@,48-57,_,192-255
 nmap <leader>gb :Gblame<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gd :Gdiff<CR>
+autocmd QuickFixCmdPost *grep* cwindow
 
 " fix for word matching on: this.function
 "set iskeyword+=\.
