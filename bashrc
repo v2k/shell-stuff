@@ -40,5 +40,9 @@ PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\] $(__git_ps1 "(%s)")\n$
 
 # bash aliases
 alias g='git'
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto'
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
+
+#ls colors
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
