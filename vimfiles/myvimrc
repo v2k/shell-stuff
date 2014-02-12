@@ -1,8 +1,54 @@
-"https://github.com/tpope/vim-pathogen
-call pathogen#infect()
+set nocompatible              " be iMproved
+filetype off                  " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" " required! 
+" Bundle 'gmarik/vundle'
+"
+" " My bundles here:
+" "
+" " original repos on GitHub
+Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
+
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Bundle 'tpope/vim-rails.git'
+" " vim-scripts repos
+" Bundle 'L9'
+" Bundle 'FuzzyFinder'
+" " non-GitHub repos
+" Bundle 'git://git.wincent.com/command-t.git'
+" " Git repos on your local machine (i.e. when working on your own plugin)
+" Bundle 'file:///Users/gmarik/path/to/plugin'
+" " ...
+"
+" filetype plugin indent on     " required!
+" "
+" " Brief help
+" " :BundleList          - list configured bundles
+" " :BundleInstall(!)    - install (update) bundles
+" " :BundleSearch(!) foo - search (or refresh cache first) for foo
+" " :BundleClean(!)      - confirm (or auto-approve) removal of unused
+" bundles
+" "
+" " see :h vundle for more details or wiki for FAQ
+" " NOTE: comments after Bundle commands are not allowed.
+
 " 
 " Tips/Tricks from SO: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc
-" 
+
+" ctrl-p - https://github.com/kien/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+        \ 'file': '\v\.(exe|so|dll)$',
+          \ 'link': 'some_bad_symbolic_links',
+            \ }
 
 filetype on
 filetype plugin on
@@ -29,11 +75,6 @@ set smarttab
 " Who wants an 8 character tab?  Not me!
 set shiftwidth=4
 set softtabstop=4
-
-
-" Cool tab completion stuff
-set wildmenu
-set wildmode=list:longest,full
 
 " Line Numbers PWN!
 "set number
@@ -62,8 +103,6 @@ set directory=~/.vim/tmp
 colo tango
 "colo pablo " better in shell
 set vi^=!
-"set tags=C:\Hardware\tech\poc1\ml\tags
-"set tags=~/tags
 set nobackup
 set noswapfile
 set tabstop=4
@@ -78,23 +117,21 @@ nmap <leader>fb :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns'
 nmap <leader>ss :w !sudo tee %<CR>
 syntax on
 
-set nocompatible
 behave mswin
 
-"set tags=C:\Hardware\tech\poc1\game\tags
 " use fuzzy finder to find files under local dir
-highlight PmenuSel ctermbg=blue ctermfg=cyan guibg=blue guifg=cyan
-highlight Pmenu ctermbg=darkblue guibg=darkblue ctermfg=grey guifg=grey
-highlight Error ctermbg=darkblue guibg=darkblue ctermfg=yellow guifg=yellow
-
-nmap <leader>f :FufFile **/*<CR>
-nmap <leader>b :FufBuffer<CR>
-nmap <leader>t :FufTag<CR>
-nmap <leader>l :FufLine<CR>
+"highlight PmenuSel ctermbg=blue ctermfg=cyan guibg=blue guifg=cyan
+"highlight Pmenu ctermbg=darkblue guibg=darkblue ctermfg=grey guifg=grey
+"highlight Error ctermbg=darkblue guibg=darkblue ctermfg=yellow guifg=yellow
+"
+"nmap <leader>f :FufFile **/*<CR>
+"nmap <leader>b :FufBuffer<CR>
+"nmap <leader>t :FufTag<CR>
+"nmap <leader>l :FufLine<CR>
 "noremap <silent> <C-]> :FufTagWithCursorWord!<CR>
-
-nmap <leader>ff :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', ['**/*.cs','**/*.php']]) <CR> :FufCoverageFile <CR>
-"set guifont=courier_new:h9
+"
+"nmap <leader>ff :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', ['**/*.cs','**/*.php']]) <CR> :FufCoverageFile <CR>
+""set guifont=courier_new:h9
 " clean up whitE
 nmap <leader>ww :%s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/geI <bar> %s/while(/while (/ge <bar> %s/\r//ge <bar> retab <cr>
 nmap <leader>w :%s/\s\+$//ge<cr>
