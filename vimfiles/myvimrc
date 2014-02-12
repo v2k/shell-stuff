@@ -69,7 +69,7 @@ set noswapfile
 set tabstop=4
 set shiftwidth=4
 set cindent
-set list
+set nolist
 set bs=2
 set hlsearch
 set guifont=courier_new:h9
