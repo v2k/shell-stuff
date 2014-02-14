@@ -3,6 +3,6 @@ vimfiles/backup/*
 vimfiles/tmp/*
 !vimfiles/tmp/README
 .netrwhist
-!vimfiles/bundle/vundle/*
 vimfiles/bundle/
+~vimfiles/bundle/vundle
 
