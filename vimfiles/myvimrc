@@ -49,6 +49,9 @@ let g:ctrlp_custom_ignore = {
         \ 'file': '\v\.(png|tga|unity|prefab|exe|so|dll|meta|csproj|unityproj|pidb|sln|userprefs)$',
           \ 'link': 'some_bad_symbolic_links',
             \ }
+" for large projects:
+let g:ctrlp_max_files=0
+
 
 filetype on
 filetype plugin on
@@ -90,6 +93,7 @@ set smartcase
 set laststatus=2
 "set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
 set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l/%L:%c
+set statusline+=\ %{fugitive#statusline()}
 
 "Working/Backup Directories
 set backup
@@ -112,25 +116,12 @@ set nolist
 set bs=2
 set hlsearch
 set guifont=courier_new:h9
-nmap <leader>fb :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', ['**/*.cs','**/*.php']]) <CR> :FufCoverageFile <CR>
 "save readonly file
 nmap <leader>ss :w !sudo tee %<CR>
 syntax on
 
 behave mswin
 
-" use fuzzy finder to find files under local dir
-"highlight PmenuSel ctermbg=blue ctermfg=cyan guibg=blue guifg=cyan
-"highlight Pmenu ctermbg=darkblue guibg=darkblue ctermfg=grey guifg=grey
-"highlight Error ctermbg=darkblue guibg=darkblue ctermfg=yellow guifg=yellow
-"
-"nmap <leader>f :FufFile **/*<CR>
-"nmap <leader>b :FufBuffer<CR>
-"nmap <leader>t :FufTag<CR>
-"nmap <leader>l :FufLine<CR>
-"noremap <silent> <C-]> :FufTagWithCursorWord!<CR>
-"
-"nmap <leader>ff :call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', ['**/*.cs','**/*.php']]) <CR> :FufCoverageFile <CR>
 ""set guifont=courier_new:h9
 " clean up whitE
 nmap <leader>ww :%s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/geI <bar> %s/while(/while (/ge <bar> %s/\r//ge <bar> retab <cr>
@@ -154,6 +145,7 @@ set iskeyword=@,48-57,_,192-255
 nmap <leader>gb :Gblame<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gd :Gdiff<CR>
+nmap <leader>gg :Ggrep <cword><CR><CR>
 autocmd QuickFixCmdPost *grep* cwindow
 
 " fix for word matching on: this.function
