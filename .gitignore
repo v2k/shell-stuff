@@ -4,5 +4,4 @@ vimfiles/tmp/*
 !vimfiles/tmp/README
 .netrwhist
 vimfiles/bundle/
-~vimfiles/bundle/vundle
 
