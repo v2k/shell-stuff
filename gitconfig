@@ -26,6 +26,9 @@
 #    autocrlf = true
     autocrlf = input
 
+[branch]
+    autosetuprebase = always
+
 [alias]
     st = status
     ci = commit
