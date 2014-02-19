@@ -101,7 +101,8 @@ set smartcase
 "Status line gnarliness
 set laststatus=2
 "set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l/%L:%c
+"set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l/%L:%c
+set statusline=\ %F%m%r%h\ %w\ \ Line:\ %l/%L:%c
 set statusline+=\ %{fugitive#statusline()}
 
 "Working/Backup Directories
