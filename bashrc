@@ -43,7 +43,9 @@ alias g='git'
 #alias ls='ls --color=auto'
 alias ls='ls -lah'
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
-alias ctags="`brew --prefix`/bin/ctags"
+if [ "$(uname)" == "Darwin" ]; then
+	alias ctags="`brew --prefix`/bin/ctags"
+fi
 
 #ls colors
 export CLICOLOR=1

@@ -87,6 +87,8 @@ set smarttab
 " Who wants an 8 character tab?  Not me!
 set shiftwidth=4
 set softtabstop=4
+" read .vimrc in current dir to override settings
+set exrc
 
 " Line Numbers PWN!
 "set number
@@ -126,6 +128,10 @@ set nolist
 set bs=2
 set hlsearch
 set guifont=courier_new:h9
+if has("gui_running")
+    set transparency=19
+endif
+
 "save readonly file
 nmap <leader>ss :w !sudo tee %<CR>
 syntax on
@@ -134,7 +140,7 @@ behave mswin
 
 ""set guifont=courier_new:h9
 " clean up whitE
-nmap <leader>ww :%s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/geI <bar> %s/while(/while (/ge <bar> %s/\r//ge <bar> retab <cr>
+nmap <leader>ww :%s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/geI <bar> %s/while(/while (/ge <bar> %s/switch(/switch (/ge <bar> %s/\r//ge <bar> %s/){/) {/ge <bar> retab <cr>
 nmap <leader>w :%s/\s\+$//ge<cr>
 "%s///ge <cr>
 

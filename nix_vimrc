@@ -2,9 +2,6 @@ fun! MySys()
   return "linux"
 endfun
 
-let g:EasyGrepMode=2
-let g:EasyGrepRecursive=1
-
 "todo: this path might be the install path
 set runtimepath=~/shell-stuff/vimfiles,$VIMRUNTIME
 source ~/shell-stuff/vimfiles/myvimrc

@@ -59,9 +59,10 @@
 [merge]
     tool = kdiff3
 [mergetool "kdiff3"]
-    path = ~/kdiff3.sh
+#path = ~/kdiff3.sh
     keepBackup = false
     trustExitCode = false
+	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
 [guitool "Helpful/Pull All Submodules"]
 [guitool "Destructive/Clean All..."]
 	cmd = git clean -f -d
