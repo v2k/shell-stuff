@@ -11,3 +11,5 @@ export PATH
 
 startxwin >/dev/null 2>&1
 export DISPLAY=localhost:10.0
+
+#[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
