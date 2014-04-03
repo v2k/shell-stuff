@@ -59,47 +59,10 @@
 [merge]
     tool = kdiff3
 [mergetool "kdiff3"]
-#path = ~/kdiff3.sh
     keepBackup = false
     trustExitCode = false
 	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
-[guitool "Helpful/Pull All Submodules"]
-[guitool "Destructive/Clean All..."]
-	cmd = git clean -f -d
-	confirm = yes
-[guitool "Destructive/Delete One File..."]
-	cmd = rm \"\"
-	noconsole = yes
-	needsfile = yes
-	confirm = yes
-[guitool "Destructive/Destroy All Work (Reset and Clean)..."]
-	cmd = git reset --hard & git clean -x -f -d
-	confirm = yes
-[guitool "Destructive/Reset All..."]
-	cmd = git reset --hard
-	confirm = yes
-[guitool "Destructive/Revert One File..."]
-	cmd = git checkout \"\"
-	noconsole = yes
-	needsfile = yes
-	confirm = yes
-[guitool "Helpful/Pull"]
-	cmd = git pull
-[guitool "Helpful/Visual Diff"]
-	cmd = git difftool --gui \"\"
-	noconsole = yes
-	needsfile = yes
-[guitool "Rebase/Continue"]
-	cmd = git rebase --continue
-[guitool "Rebase/Skip"]
-	cmd = git rebase --skip
-	confirm = yes
-[guitool "Rebase/Abort"]
-	cmd = git rebase --abort
-	confirm = yes
 [fetch]
 	recurseSubmodules = true
 [init]
 	templatedir = ~/.git_template
-[guitool "Helpful/Submodule Git Gui"]
-	cmd = git submodule foreach git gui
