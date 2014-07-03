@@ -22,6 +22,8 @@ call vundle#rc()
 " " original repos on GitHub
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
+"Bundle 'Valloric/YouCompleteMe'
+Bundle 'bling/vim-airline'
 
 " Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -54,8 +56,8 @@ Bundle 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-        \ 'file': '\v\.(png|tga|unity|prefab|exe|so|dll|meta|csproj|unityproj|pidb|sln|userprefs)$',
+      \ 'dir':  '\v(.git|.hg|.svn|Temp|Library)$',
+        \ 'file': '\v\.(png|tga|unity|mat|prefab|exe|so|dll|meta|csproj|unityproj|pidb|sln|userprefs|rb|asset)$',
           \ 'link': 'some_bad_symbolic_links',
             \ }
 " for large projects:
@@ -81,12 +83,12 @@ endif
 set autoindent
 
 " Spaces are better than a tab character
-set expandtab
+set noexpandtab
 set smarttab
 
 " Who wants an 8 character tab?  Not me!
 set shiftwidth=4
-set softtabstop=4
+set tabstop=4
 " read .vimrc in current dir to override settings
 set exrc
 
@@ -104,8 +106,9 @@ set smartcase
 set laststatus=2
 "set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
 "set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l/%L:%c
-set statusline=\ %F%m%r%h\ %w\ \ Line:\ %l/%L:%c
-set statusline+=\ %{fugitive#statusline()}
+"set statusline=\ %F%m%r%h\ %w\ \ Line:\ %l/%L:%c
+"set statusline+=\ %{fugitive#statusline()}
+let &t_Co=256
 
 "Working/Backup Directories
 set backup
@@ -140,14 +143,13 @@ behave mswin
 
 ""set guifont=courier_new:h9
 " clean up whitE
-nmap <leader>ww :%s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/geI <bar> %s/while(/while (/ge <bar> %s/switch(/switch (/ge <bar> %s/\r//ge <bar> %s/){/) {/ge <bar> retab <cr>
+nmap <leader>ww :%s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/geI <bar> %s/while(/while (/ge <bar> %s/switch(/switch (/ge <bar> %s/\r//ge <bar> %s/){/) {/ge <bar> retab! <cr>
 nmap <leader>w :%s/\s\+$//ge<cr>
 "%s///ge <cr>
 
 "| %s/( /(//g | %s/ )/)//g | %s/if (/if (//g | %s/for(/for( //g<CR>
-nmap <leader>tt :retab<CR>
+nmap <leader>tt :%retab!<CR>
 nmap <leader>ee :%s/\r//g<CR>
-nmap <leader>gg :Ggrep 
 nmap <C-Tab> :bp<CR>
 nmap <C-S-Tab> :bn<CR>
 "need to fix this for windows
@@ -161,8 +163,12 @@ set iskeyword=@,48-57,_,192-255
 nmap <leader>gb :Gblame<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gd :Gdiff<CR>
-nmap <leader>gg :Ggrep <cword><CR><CR>
+nmap <leader>gg :Ggrep <cword> -- *.cs<CR><CR>
 autocmd QuickFixCmdPost *grep* cwindow
 
 " fix for word matching on: this.function
 "set iskeyword+=\.
+ 
+" fix for using viwy and viwp without having to select "0
+"xnoremap p pgvy
+
