@@ -108,7 +108,9 @@ set laststatus=2
 "set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l/%L:%c
 "set statusline=\ %F%m%r%h\ %w\ \ Line:\ %l/%L:%c
 "set statusline+=\ %{fugitive#statusline()}
+"vim-airline
 let &t_Co=256
+let g:airline#extensions#tabline#enabled = 1
 
 "Working/Backup Directories
 set backup
