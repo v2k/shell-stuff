@@ -1,20 +1,20 @@
-set nocompatible              " be iMproved
-filetype off                  " required!
+set nocompatible			  " be iMproved
+filetype off				  " required!
 
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme)
-    echo "Installing Vundle.."
-    echo ""
-    silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-    let iCanHazVundle=0
+	echo "Installing Vundle.."
+	echo ""
+	silent !mkdir -p ~/.vim/bundle
+	silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+	let iCanHazVundle=0
 endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" " required! 
+" " required!
 " Bundle 'gmarik/vundle'
 "
 " " My bundles here:
@@ -22,8 +22,9 @@ call vundle#rc()
 " " original repos on GitHub
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'bling/vim-airline'
+Bundle 'digitaltoad/vim-jade'
 
 " Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -37,29 +38,29 @@ Bundle 'bling/vim-airline'
 " Bundle 'file:///Users/gmarik/path/to/plugin'
 " " ...
 "
-" filetype plugin indent on     " required!
+" filetype plugin indent on		" required!
 " "
 " " Brief help
-" " :BundleList          - list configured bundles
-" " :BundleInstall(!)    - install (update) bundles
+" " :BundleList			 - list configured bundles
+" " :BundleInstall(!)	 - install (update) bundles
 " " :BundleSearch(!) foo - search (or refresh cache first) for foo
-" " :BundleClean(!)      - confirm (or auto-approve) removal of unused
+" " :BundleClean(!)		 - confirm (or auto-approve) removal of unused
 " bundles
 " "
 " " see :h vundle for more details or wiki for FAQ
 " " NOTE: comments after Bundle commands are not allowed.
 
-" 
+"
 " Tips/Tricks from SO: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc
 
 " ctrl-p - https://github.com/kien/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v(.git|.hg|.svn|Temp|Library)$',
-        \ 'file': '\v\.(png|tga|unity|mat|prefab|exe|so|dll|meta|csproj|unityproj|pidb|sln|userprefs|rb|asset)$',
-          \ 'link': 'some_bad_symbolic_links',
-            \ }
+		\ 'dir':	'\v(.git|.hg|.svn|Temp|Library)$',
+		\ 'file': '\v\.(png|tga|unity|mat|prefab|exe|so|dll|meta|csproj|unityproj|pidb|sln|userprefs|rb|asset)$',
+		\ 'link': 'some_bad_symbolic_links',
+		\ }
 " for large projects:
 let g:ctrlp_max_files=0
 
@@ -134,7 +135,7 @@ set bs=2
 set hlsearch
 set guifont=courier_new:h9
 if has("gui_running")
-    set transparency=19
+	set transparency=19
 endif
 
 "save readonly file
@@ -145,8 +146,8 @@ behave mswin
 
 ""set guifont=courier_new:h9
 " clean up whitE
-nmap <leader>ww :%s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/geI <bar> %s/while(/while (/ge <bar> %s/switch(/switch (/ge <bar> %s/\r//ge <bar> %s/){/) {/ge <bar> retab! <cr>
-nmap <leader>w :%s/\s\+$//ge<cr>
+nmap <leader>ww :%s/\s\+$//ge <bar> %s/ )/)/ge <bar> %s/( /(/ge <bar> %s/if(/if (/ge <bar> %s/for(/for (/ge <bar> %s/foreach(/foreach (/geI <bar> %s/while(/while (/ge <bar> %s/switch(/switch (/ge <bar> %s/\r//ge <bar> %s/){/) {/ge <bar> %s/\(\S\){/\1 {/ge <bar> %s/\n\s*{/ {/ge <bar> %s/\}\(\S\)/} \1/ge <bar> %s/\(^\n\)\+\n/\1/ge <bar> retab! <cr>
+nmap <leader>w :%s/\s\+$//ge <bar> :%s/^(\t\+)\s\+//ge <bar> retab! <cr>
 "%s///ge <cr>
 
 "| %s/( /(//g | %s/ )/)//g | %s/if (/if (//g | %s/for(/for( //g<CR>
@@ -170,7 +171,7 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 " fix for word matching on: this.function
 "set iskeyword+=\.
- 
+
 " fix for using viwy and viwp without having to select "0
 "xnoremap p pgvy
 
