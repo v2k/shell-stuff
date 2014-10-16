@@ -2,3 +2,9 @@
 run setup.sh
 #windows
 copy win_vimrc to _vimrc in vim's install dir; repo should be at C:\Users\<username>\shell-stuff
+
+Shell environment scripts.
+
+Usage, just copy/paste the following: 
+
+> curl https://raw.github.com/mostlygeek/shell-stuff/master/install.sh | bash
