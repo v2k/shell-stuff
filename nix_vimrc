@@ -3,7 +3,7 @@ fun! MySys()
 endfun
 
 "todo: this path might be the install path
-set runtimepath=~/shell-stuff/vimfiles,$VIMRUNTIME
-source ~/shell-stuff/vimfiles/myvimrc
+set runtimepath=~/v2k-env/vimfiles,$VIMRUNTIME
+source ~/v2k-env/vimfiles/myvimrc
 set ff=unix
 
