@@ -17,7 +17,7 @@ fi
 
 # this is the READ-ONLY installation for when I don't have
 # an ssh-key set up for the remote side
-git clone git://github.com/v2k/shell-stuff.git v2k-env
+git clone git@github.com:v2k/shell-stuff.git
 cd v2k-env
 ./setup.sh
 cd ~
