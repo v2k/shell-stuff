@@ -10,25 +10,22 @@ if !filereadable(vundle_readme)
 	silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
 	let iCanHazVundle=0
 endif
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
 
 " let Vundle manage Vundle
 " " required!
-" Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 "
 " " My bundles here:
 " "
 " " original repos on GitHub
-Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'bling/vim-airline'
-Bundle 'digitaltoad/vim-jade'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+"Bundle 'Valloric/YouCompleteMe'
+Plugin 'bling/vim-airline'
+"Bundle 'digitaltoad/vim-jade'
 
-" Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Bundle 'tpope/vim-rails.git'
 " " vim-scripts repos
 " Bundle 'L9'
 " Bundle 'FuzzyFinder'
@@ -38,20 +35,22 @@ Bundle 'digitaltoad/vim-jade'
 " Bundle 'file:///Users/gmarik/path/to/plugin'
 " " ...
 "
-" filetype plugin indent on		" required!
-" "
-" " Brief help
-" " :BundleList			 - list configured bundles
-" " :BundleInstall(!)	 - install (update) bundles
-" " :BundleSearch(!) foo - search (or refresh cache first) for foo
-" " :BundleClean(!)		 - confirm (or auto-approve) removal of unused
-" bundles
-" "
-" " see :h vundle for more details or wiki for FAQ
-" " NOTE: comments after Bundle commands are not allowed.
-
 "
-" Tips/Tricks from SO: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 " ctrl-p - https://github.com/kien/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
