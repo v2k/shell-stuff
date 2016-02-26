@@ -65,6 +65,7 @@ let g:ctrlp_max_files=0
 
 
 filetype on
+filetype indent on
 filetype plugin on
 syntax enable
 
